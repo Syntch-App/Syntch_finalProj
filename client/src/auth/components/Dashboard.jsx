@@ -103,7 +103,7 @@ function Dashboard() {
         });
         const data = await response.json();
         const { statistics } = data;
-        setUserStatistics(statistics);
+        setUserStatistics(statistics || []);
       } catch (error) {
         console.error('Error fetching statistics:', error);
       }
